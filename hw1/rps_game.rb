@@ -45,7 +45,7 @@ p rps_game_winner([["Armando", "S"], ["Dave", "R"]])
 
 
 def rps_tournament_winner(game)
-  if game[0][1] =~ /[PRS]/
+  if game[0][0] =~ /[a-zA-Z]/
     return rps_game_winner(game)
   else
     rps_game_winner([rps_tournament_winner(game[0]), rps_tournament_winner(game[1])])

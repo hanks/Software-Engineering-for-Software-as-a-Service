@@ -2,6 +2,7 @@ def combine_anagrams(words)
   ana_list = []
   sorted_list = []
   words.each do |word|
+    word = word.downcase
     temp_list = word.scan(/./)
     temp_list.sort!
     sorted_list.push(temp_list)
